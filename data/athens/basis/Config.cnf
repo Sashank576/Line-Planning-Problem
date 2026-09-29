@@ -1,0 +1,55 @@
+setting-name; setting-value
+include; "../../Global-Config.cnf"
+# ===========================================================================
+# === LOCAL_ONLY from Global-Config.cnf =====================================
+# ===========================================================================
+ptn_name; "Athens-Metro"
+period_length; 600
+time_units_per_minute; 10
+ptn_draw_conversion_factor; 10
+loads_draw_conversion_factor; 0.5
+od_draw_conversion_factor; 0.5
+lpool_coordinate_factor; 0.1
+# speed of the vehicles in km/h
+gen_vehicle_speed; 100
+gen_conversion_length; 1
+gen_conversion_coordinates; 0.001
+ptn_stop_waiting_time; 3
+ean_change_penalty; 50
+ean_default_minimal_waiting_time; 3
+ean_default_maximal_waiting_time; 6
+ean_default_minimal_change_time; 10
+ean_default_maximal_change_time; 609
+# ===========================================================================
+# === Network Specific Settings =============================================
+# ===========================================================================
+gen_passengers_per_vehicle; 1086
+lpool_fixed_cost_per_line; 0.0
+lpool_minimal_line_length; 5
+delays_count; 10
+delays_min_delay; 15
+delays_max_delay; 60
+lc_budget; 500
+lc_traveling_time_mip_time_budget; 13771440
+# ===========================================================================
+# === Optimized Visualization  ==============================================
+# ===========================================================================
+# the scale of the plotted image
+lpool_opt_visualisation_plot_scale; 3
+lpool_opt_visualisation_plot_margins; 0.01
+lpool_opt_visualisation_line_distance; 2
+lpool_opt_visualisation_line_width; 5
+lpool_opt_visualisation_draw_legend; true
+# the scale of the legend in plotted image
+lpool_opt_visualisation_legend_scaling; 1
+# location of legend (best, upper/middle/lower right/left)
+lpool_opt_visualisation_legend_location; best
+# size for nodes when scaling is off
+lpool_opt_visualisation_def_node_size; 800
+lpool_opt_visualisation_node_labels; false
+# ===========================================================================
+# === State / Experiments / Automatization ==================================
+# ===========================================================================
+include_if_exists; "State-Config.cnf"
+include_if_exists; "Private-Config.cnf"
+include_if_exists; "After-Config.cnf"
